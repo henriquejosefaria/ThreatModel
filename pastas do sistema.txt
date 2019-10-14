@@ -1,0 +1,53 @@
+cd /dev -> todos os dispositivos de hardware gerido pelo sistema operativo
+
+/bin -> uma parte dos executáveis do sistema
+
+/sbin -> ferramentas de execução do sistema operativo
+
+/usrbin -> 
+
+/boot -> ficheiros de configuração inicial do arranque do sistema operativo
+
+/etc -> configurações gerais do sistema operativo
+
+/home -> sessão de trabalho  do user
+
+/lib -> pasta de bibliotecas do sistema
+
+/lost+found -> registo de todas as operações do sistema, se o computador for abaixo este diário sobrevive. Após serem executados os comandos são apagados.
+
+/mnt (mount) -> local onde é montado o sistema de ficheiros (local ou remoto) de uma máquina virtual
+
+/sys -> pasta de sistema com mais configurações
+
+/tmp -> pasta temporária. Muitos ficheiros quando estão a ser editados são criados na pasta tmp.
+
+/usr -> ferramentas usadas pelo utilizador
+
+/var -> usada para segurança do sistema  (em /var/log são guardados os logs do sistema)
+| em auth.log // system.log guardam-se os logs do usr, posso encontrar pass ou nome aqui.
+
+
+// se escrever id na prompt vejo a class do utilizador/grupo etc.
+// o primeiro utilizador criado é um com podres especiais, pode escalar para su. Faz-se com base no group do user.
+
+//sudo useradd coisinho -> cria novo utilizador do sistema coisinho
+//sudo passwd coisinho  -> quero definir a pass, autentico-me como user priviligiado e defino-a em baixo depois de executar o comando
+//su coisinho -> transforma-me no utilizador coisinho que criei anteriormente (sem traço entre su e coisinho ele arranca na pasta em que estava antes
+//ctrl+d encerra a sessão anterior
+
+//chmod o-rwx -> para os outros quero retirar as permissões read,write e execute
+
+//sudo nano /etc/group
+
+// /etc/passwd -> todos os utilizadores existentes
+(user:_:nº user:nº grupo:nome user: area de trabalho user: interpretador de comandos que o user usa)
+// se um utilizador usar uma shell nologin -> isto significa que mal uma shell é aberta esta é fechada, ou seja não pode usar uma prompt.
+
+// /etc/group -> posso mudar o grupo de um utilizador
+
+//ls -ld -> ver permissões da diretoria
+// jhonTheRiper -> permite adivinhar senhas de utilizadores
+
+
+
