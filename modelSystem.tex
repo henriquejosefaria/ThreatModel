@@ -1,6 +1,6 @@
 \section{Model System for the Precision Agriculture System}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 
 	\centering
 
@@ -43,7 +43,18 @@
   	\label{fig03}
 \end{figure}
 
-% Meter a parte que falta aqui da farm
+No subsistema da quinta identifica-se 3 processos nos quais o \"data flow\" pode sofrer ataques devido a vulnerabilidades.Na figura 4 podemos ver os actuators que controlam a temperatura/humidade das zonas da farm.Os basestations/Gateways coletam a informação sobre os sensores e , posteriormente, envia-na para a Cloud.
+
+\begin{figure}[H]
+
+	\centering
+
+ 	\includegraphics[scale = 0.1]{farmModel.png}
+
+ 	\caption {Model System for the Farm Subsystem}
+
+  	\label {fig04}
+\end{figure}
 
 \section{Finding \& Addressing Threats}
 
@@ -54,7 +65,7 @@
 \subsection{FrontEnd}
 
 \subsubsection{Spoofing}
-\label{Spoofing}
+\label{Spoofing:sec}
 \hfill\\
 \begin{itemize}
 
@@ -101,7 +112,7 @@
 \hfill\\
 \begin{itemize}
 
-\item Como referido em \ref{Spoofing} no primeiro ponto sobre Spoofing, poderia causar DoS usando o delay para prevenir tentativas de brute force das passwords.
+\item Como referido na seção de Spoofing no primeiro ponto, poderia causar-se DoS usando o delay para prevenir tentativas de brute force das passwords.
 
 \hfill\\
 \item Um atacante depois de entrar no sistema Front-End como Expert podendo tentar atualizar o sistema atraves de vários PCs com login na mesma conta.Provocando que o Servidor não conseguisse satisfazer todos os pedidos.O mesmo poderia ser feito caso fosse feito login como Farmer atraves de varios GETs.O Profiling do tráfego da rede como anomalias e reputações de IP mitigariam o ataque.
@@ -113,7 +124,10 @@
 
 \begin{itemize}
 
-\item
+\item Um atacante não ligado ao sistema pode tentar utilizar a API para aceder ao Back-End.Ganhando assim os mesmos privilegios que o servidor Front-End.Uma lista com os servidores/utilizadores que podem aceder diretamente a API podia mitigar este ataque.
 
 \end{itemize}
+
+\hfill\\
+
 

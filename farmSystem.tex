@@ -1,19 +1,7 @@
-\section{Farm Model System}
+\subsection{Farm Model System}
 
-No subsistema de quinta identificamos 3 processos nos quais o \"data flow\" pode sofrer ataques devido a vulnerabilidades.
 
-\begin{figure}[h!]
-
-	\centering
-
- 	\includegraphics[scale = 0.15]{farmModel.png}
-
- 	\caption {Model System for the Farm Subsystem}
-
-  	\label {fig02}
-\end{figure}
-
-\subsection{1,3,4-Ataques de Spoofing}
+\subsubsection{Ataques de Spoofing}
 \par\hfill
 \par (1) Atacante pode fazer-se passar por um sensor e transmitir dados falsos.\newline
 Correção => identificação de sensor.\newline
@@ -24,13 +12,13 @@ Correção => identificação do gateway.\newline
 \par (4) Atacante pode fazer-se passar pela cloud e transmitir dados falsos.\newline
 Correção => identificação da cloud.\newline
 
-\subsection{Ataques de Tampering}
+\subsubsection{Ataques de Tampering}
 \par\hfill
 \par(Gateway) Um atacante pode alterar informação dos dados obtidos e apagar o log. \newline
 Correção => ACLs devidamente feitas.\newline
 
 
-\subsection{1,3,4-Ataques de Repudiation}
+\subsubsection{Ataques de Repudiation}
 \par\hfill
 \par(1)Atacante pode fazer-se passar por um sensor e enviar informação errada ao gateway.\newline
 Correção => Identificação inequivoca de quem envia.\newline
@@ -39,14 +27,14 @@ Correção => Identificação inequivoca de quem envia.\newline
 \par(4)Atacante pode fazer-se passar pela cloud e enviar informação errada para o gateway.\newline
 Correção => Identificação inequivoca de quem envia.\newline
 
-\subsection{1,3-Ataques de Information Disclosure}
+\subsubsection{Ataques de Information Disclosure}
 \par\hfill
 \par (1) Se a informação não for encriptada pode ser lida por um concorrente que não pague o serviço dispendioso e que possa obter vantagem competitiva.\newline
 Correção => encriptação com chave simétrica conhecida apenas pelo sensor e  pelo gateway ou sistema de chave pública.\newline
 \par (3) Se não for info encriptada pode ser lida pelo fornecedor da cloud que pode usar essa informação para um concorrente visando lucrar com a informação.\newline
 Correção => encriptação com chave simétrica conhecida apenas pelo gateway e pelo front-end da aplicação.\newline
 
-\subsection{1,3,4-Denial of Service}
+\subsubsection{Denial of Service}
 \par\hfill
 \par Um atacante pode tentar levar a cabo um ataque DoS nos processos 1 3 e 4.
 Correção => No caso de tentative de Denial of Service podemos programar os nosso equipamentos para, após um x número de tentativas, bloquear o IP (temporáriamente) de quem está a gastar recursos do gateway sem se autenticar corretamente.\newline
@@ -54,7 +42,7 @@ Correção => No caso de tentative de Denial of Service podemos programar os nos
 
 \textit{Nota:} No caso da cloud, está a cargo do provedor do serviço tratar casos de tentativas de Denial of Service.\newline
 
-\subsection{1,3,4-Elevation of privilege}
+\subsubsection{Elevation of privilege}
 \par\hfill
 \par (1) Verificar os dados recebidos como sendo dados comuns de um sensor.\newline
 Correção => usar palavra chave simetrica ou assimetrica com não repúdio.\newline
@@ -114,3 +102,9 @@ Usa AES-128 encryption para garantir a encriptação dos dados.
 \par\hfill
 \par O tratamento da segurança da informação na cloud (encriptada ou não) é responsabilidade do provedor do serviço, logo este relatório não englobará medidas para proteger a cloud de qualquer ataque. Apenas de proteger a informação que lhe é passada encriptando-a.\newline
 Para além disso é necessário ainda assim que tenhamos uma forma inequivoca de garantir o não repúdio por parte do gateway face a cloud e vice-versa, nesta matéria aconselha-se o uso de um certificado digital.\newline 
+
+\subsection{Front-End}
+\hfill\\
+
+A segurança necessária para assegurar o subsistema do Front-End baseia-se fortemente na encriptação da informaçao que é enviada e recebida pelos utilizadores/servidor(HTTPS,IPsec) como tambem pela utilização de Assinaturas e MACs para garantir a integridade.Finalmente tambem dever-se-á utilizar ACLs e Profiling de Tráfego para previnir acesso indevidos e DoS ,respetivamente.
+
