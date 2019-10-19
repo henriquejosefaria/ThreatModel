@@ -78,26 +78,26 @@ Correção => usar palavra chave assimetrica com não repúdio. \newline
 \par Para garantir que um atacante não adiciona um sensor com código modificado de forma a de alguma forma comprometer o sistema, os sensores a poderem comunicar com o gateway devem ser definidos á partida.\newline
 
 \subsubsection{ZigBee sensors}
-\par\hfill
-\par Quanto a identificação dos mesmos esta é feita de forma inequivoca, garantindo que não é possível um atacante replicar o id do sensor.\newline 
-Usa AES-128 encryption para garantir a encriptação dos dados.
-
+\begin{itemize}
+\item Quanto á identificação dos mesmos esta é feita de forma inequivoca, garantindo que não é possível um atacante replicar o id do sensor~\cite{ref_url1}.\newline 
+\item Usa AES-128 encryption para garantir a encriptação dos dados~\cite{ref_url1}.
+\end{itemize}
 \subsubsection{TelosB motes}
-\par\hfill
-\par Usa TinyOS como a biblioteca criptográfica normalmente, esta tem um algoritmo eficiente com overhead de encriptação na ordem dos microsegundos, garantindo a integridade do sistema de forma rápida e utilizando poucos recursos.\newline
-\par Relativamente barato.
-
+\begin{itemize}
+\item Usa TinyOS como a biblioteca criptográfica normalmente, esta tem um algoritmo eficiente com overhead de encriptação na ordem dos microsegundos, garantindo a integridade do sistema de forma rápida e utilizando poucos recursos~\cite{ref_url2}.\newline
+\item Relativamente barato~\cite{ref_url2}.
+\end{itemize}
 \subsubsection{Arduino}
-\par\hfill
-\par Usa AES-128 encryption para garantir a encriptação dos dados.\newline
-\par Usa X.509 que é um padrão ITU-T para infraestruturas de chaves públicas (ICP),permitindo autenticação forte.
-\par Permite programar os processos de autenticação dos sensores e como estes comunicam. 
-
+\begin{itemize}
+\item Normalmente usa AES-128 encryption para garantir a encriptação dos dados~\cite{ref_url3.1}~\cite{ref_url3.2}.\newline
+\par Usa X.509 que é um padrão ITU-T para infraestruturas de chaves públicas (ICP),permitindo autenticação forte~\cite{ref_url3.3}~\cite{ref_url3.4}.
+\item Permite programar os processos de autenticação dos sensores e como estes comunicam. 
+\end{itemize}
 \subsubsection{Raspberry}
-\par\hfill
-\par Usa mecanismos de chave pública para garantir a encriptação.
-\par Relativamente barato.\newline
-
+\begin{itemize}
+\item Usa vários mecanismos para garantir a encriptação, como RC4 encryption,  entre outros.~\cite{ref_url4.1}.
+\item Relativamente barato~\cite{ref_url4}.\newline
+\end{itemize}
 
 \par Concluindo, se o foco for ter uma encriptação o mais forte possível, devemos optar por utilizar um raspberry sensor visto este usar mecanismos de chave pública. No entanto estes pesam no requisito de transmissão de dados de forma mais rápida possível. O TelosB motes tem essa vantagem embora não possua uma encriptação tão boa como os restantes sensores.\newline
 
