@@ -1,0 +1,29 @@
+\babel@toc {portuges}{}
+\contentsline {title}{Threat Model for a Precision Agriculture System}{1}% 
+\authcount {2}
+\contentsline {author}{Henrique Faria \and Paulo Rosa A81139}{1}% 
+\contentsline {section}{\numberline {1}Model System for the Precision Agriculture System}{3}% 
+\contentsline {section}{\numberline {2}Finding \& Addressing Threats}{6}% 
+\contentsline {subsection}{\numberline {2.1}FrontEnd}{6}% 
+\contentsline {subsubsection}{Spoofing}{6}% 
+\contentsline {subsubsection}{Tampering}{6}% 
+\contentsline {subsubsection}{Repudiation}{7}% 
+\contentsline {subsubsection}{Information Disclosure}{7}% 
+\contentsline {subsubsection}{Denial of Service}{7}% 
+\contentsline {subsubsection}{Elevation of Privilege}{7}% 
+\contentsline {subsection}{\numberline {2.2}Farm Model System}{8}% 
+\contentsline {subsubsection}{Ataques de Spoofing}{8}% 
+\contentsline {subsubsection}{Ataques de Tampering}{8}% 
+\contentsline {subsubsection}{Ataques de Repudiation}{8}% 
+\contentsline {subsubsection}{Ataques de Information Disclosure}{8}% 
+\contentsline {subsubsection}{Denial of Service}{8}% 
+\contentsline {section}{\numberline {3}Considera\IeC {\c c}\IeC {\~o}es Finais}{9}% 
+\contentsline {subsection}{\numberline {3.1}Front-End}{9}% 
+\contentsline {subsection}{\numberline {3.2}Sensores}{9}% 
+\contentsline {subsubsection}{ZigBee sensors}{9}% 
+\contentsline {subsubsection}{TelosB motes}{9}% 
+\contentsline {subsubsection}{Arduino}{10}% 
+\contentsline {subsubsection}{Raspberry}{10}% 
+\contentsline {subsection}{\numberline {3.3}Gateway}{10}% 
+\contentsline {subsection}{\numberline {3.4}Cloud}{11}% 
+\contentsline {section}{subsection}{11}% 

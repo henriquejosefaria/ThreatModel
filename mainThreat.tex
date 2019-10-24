@@ -6,25 +6,16 @@
 \usepackage[T1]{fontenc}
 \usepackage{verbatim}
 \usepackage{float}
+\usepackage[utf8]{inputenc}
 \graphicspath{ {./models/} }
+\renewcommand{\labelitemi}{$\bullet$}
 
-\title{Threat Model for a Precision Agriculture System}
-
-\author{Henrique Faria \and Paulo Jorge}
-
-
-\institute{Departamento de Informática, Universidade do Minho}
 
 
 \begin{document} 
-
-\maketitle
 \input{title.tex}
-\newpage
-\hfill
 \input{modelSystem.tex}
 \input{farmSystem.tex}
-
 
 
 \begin{thebibliography}{8}
@@ -32,13 +23,11 @@
 \bibitem{ref_url1} {https://www.blackhat.com/docs/us-15/materials/us-15-Zillner-ZigBee-Exploited-The-Good-The-Bad-And-The-Ugly-wp.pdf}
 
 \bibitem{ref_url2} {https://www.researchgate.net/publication/323999621\_Performance\_evaluation\_on\_TelosB\_mote\_of\_a\_secure\_data\_aggregation\_protocol\_using\_ECC}
-
 \bibitem{ref_url3.1} {https://www.dfrobot.com/blog-911.html}
 \bibitem{ref_url3.2} {https://everythingesp.com/esp32-arduino-tutorial-encryption-aes128-in-ecb-mode/}
 \bibitem{ref_url3.3} {https://www.arduino.cc/en/IoT/HomePage}
 \bibitem{ref_url3.4} {https://docs.aws.amazon.com/pt\_br/iot/latest/developerguide/x509-certs.html}
 \bibitem{ref_url4.1} {https://ieeexplore.ieee.org/document/6782081}
-\bibitem{ref_url4.2} {}
 \end{thebibliography}
 
 \end{document}
